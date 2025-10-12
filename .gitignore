@@ -18,6 +18,20 @@ homeassistant/components/*/translations
 # Hide some OS X stuff
 .DS_Store
 .AppleDouble
+
+# Hide HAR files (network capture files with sensitive data)
+*.har
+
+# Development and testing files (exclude from commits)
+test_*.py
+deploy.py
+deploy.sh
+ha_pid.txt
+*_test_templates.md
+*_streaming_*.py
+*_implementation.md
+*_guide.md
+*_overengineered_reference.py
 .LSOverride
 Icon
 

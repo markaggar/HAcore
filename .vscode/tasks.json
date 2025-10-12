@@ -10,8 +10,7 @@
         "reveal": "always",
         "panel": "new"
       },
-      "problemMatcher": [],
-      "dependsOn": ["Compile English translations"]
+      "problemMatcher": []
     },
     {
       "label": "Pytest",
@@ -167,6 +166,16 @@
       "group": {
         "kind": "build",
         "isDefault": true
+      }
+    },
+    {
+      "label": "Compile translations (Synology only)",
+      "detail": "Compile translations for Synology DSM integration only - much faster for development.",
+      "type": "shell",
+      "command": "${command:python.interpreterPath} -m script.translations develop --integration synology_dsm",
+      "group": {
+        "kind": "build",
+        "isDefault": false
       }
     },
     {
